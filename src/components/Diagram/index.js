@@ -57,7 +57,7 @@ function Diagram() {
         buffer.stamp.minutes = Math.floor((buffer.stamp.milliseconds / 1000 / 60) << 0);
         buffer.path.x = buffer.stamp.milliseconds / 10;
 
-        buffer.path.red.y = Math.sin(buffer.path.x ^ 10);
+        buffer.path.red.y = Math.tan(buffer.path.x);
         if (!buffer.path.red.awl) buffer.path.red.awl = `M 0 ${draw.path.red.y} L ${layout.width} ${draw.path.red.y} `;
         buffer.path.red.awl += `L ${layout.width + buffer.path.x} ${draw.path.red.y} `;
 
